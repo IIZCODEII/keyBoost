@@ -19,7 +19,7 @@ setup(
                     'yake',
                     'keybert',
                     'gensim==3.8.3',
-                    'https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.0.0/en_core_web_sm-3.0.0.tar.gz#egg=en_core_web_sm',
-                    'https://github.com/explosion/spacy-models/releases/download/fr_core_news_sm-3.0.0/fr_core_news_sm-3.0.0.tar.gz#egg=fr_core_news_sm',
+                    'en_core_web_sm @ git+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.0.0/en_core_web_sm-3.0.0.tar.gz',
+                    'fr_core_news_sm @ git+https://github.com/explosion/spacy-models/releases/download/fr_core_news_sm-3.0.0/fr_core_news_sm-3.0.0.tar.gz',
                     ], #external packages as dependencies
 )
