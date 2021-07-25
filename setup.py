@@ -6,9 +6,7 @@ setup(
    description='KeyBoost is simple and easy-to-use keyword extraction tool that moves away the hassle of selecting the best models for your specific use-case.',
    author='Zakaria Bekkar',
    author_email='zakaria.bekkar@ens-paris-saclay.fr',
-   packages=['keyboost',
-   'keyboost.models',
-   'keyboost.consensus'],  #same as name
+   packages=find_packages("."),  #same as name
    install_requires=['wheel',
                     'torch',
                     'torchvision',
