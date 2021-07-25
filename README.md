@@ -2,7 +2,7 @@
 [![PyPI - License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/MaartenGr/keybert/blob/master/LICENSE)
 [![PyPI - PyPi](https://img.shields.io/pypi/v/keyBERT)](https://pypi.org/project/keybert/)
 [![Build](https://img.shields.io/github/workflow/status/MaartenGr/keyBERT/Code%20Checks/master)](https://pypi.org/project/keybert/)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1OxpgwKqSzODtO3vS7Xe1nEmZMCAIMckX?usp=sharing)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1X-ANEMa1xmNFztRdo-YXQh2lBmPwVueQ/view?usp=sharing)
 
 <p align = 'center'> <img src="keyboost.png"/> </p>
 
@@ -20,8 +20,7 @@ A technical deep dive on the ins and outs of this architecture is availaible [he
    1. [About the Project](#about)  
    2. [Getting Started](#gettingstarted)    
         2.1. [Installation](#installation)    
-        2.2. [Basic Usage](#usage)     
-        2.3. [Embedding Models](#embeddings)
+        2.2. [Basic Usage](#usage)
 <!--te-->
 
 
@@ -59,15 +58,16 @@ keyBoost is disigned with the yearning to provide a simple and easy out-of-the-b
 Installation can very simply be done using [pypi](https://pypi.org/project/keybert/):
 
 ```
-pip install keybert
+pip install git+https://github.com/IIZCODEII/keyboost.git#egg=keyboost
 ```
 
 <a name="usage"/></a>
 ###  2.2. Usage
 
-The most minimal example can be seen below for the extraction of keywords:
+The basic task of extracting keywords from a document with keyBoost can be done in a few lines of code :
+
 ```python
-from keybert import KeyBERT
+from keyboost.keyBoost import *
 
 doc = """
          Supervised learning is the machine learning task of learning a function that
@@ -81,89 +81,23 @@ doc = """
          the learning algorithm to generalize from the training data to unseen situations in a
          'reasonable' way (see inductive bias).
       """
-kw_model = KeyBERT()
-keywords = kw_model.extract_keywords(doc)
+keyboost = KeyBoost('paraphrase-MiniLM-L6-v2')
+keywords = keyboost.extract_keywords(text=doc,
+                       language='en',
+                       n_top=10,
+                       keyphrases_ngram_max=2,
+                       consensus='statistical',
+                       models=['keybert','yake','textrank'])
 ```
 
-You can set `keyphrase_ngram_range` to set the length of the resulting keywords/keyphrases:
+You can intuitively fine tune the results by:
+* setting `keyphrase_ngram_range` to the top bound length you would like for the keyphrases
+* setting `n_top` in accordance with the number of keywords you want
+* setting `consensus` to either *statistical* or *rank*
+* selecting only a subset of the 3 main models in `models`
 
-```python
->>> kw_model.extract_keywords(doc, keyphrase_ngram_range=(1, 1), stop_words=None)
-[('learning', 0.4604),
- ('algorithm', 0.4556),
- ('training', 0.4487),
- ('class', 0.4086),
- ('mapping', 0.3700)]
-```
+For a more detailed introduction to the capabilities of keyboost, a tutorial is availaible in the format of Colab Notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1X-ANEMa1xmNFztRdo-YXQh2lBmPwVueQ/view?usp=sharing)
 
-To extract keyphrases, simply set `keyphrase_ngram_range` to (1, 2) or higher depending on the number
-of words you would like in the resulting keyphrases:
-
-```python
->>> kw_model.extract_keywords(doc, keyphrase_ngram_range=(1, 2), stop_words=None)
-[('learning algorithm', 0.6978),
- ('machine learning', 0.6305),
- ('supervised learning', 0.5985),
- ('algorithm analyzes', 0.5860),
- ('learning function', 0.5850)]
-```
-
-We can highlight the keywords in the document by simply setting `hightlight`:
-
-```python
-keywords = kw_model.extract_keywords(doc, highlight=True)
-```
-<img src="images/highlight.png" width="75%" height="75%" />
-
-
-**NOTE**: For a full overview of all possible transformer models see [sentence-transformer](https://www.sbert.net/docs/pretrained_models.html).
-I would advise either `"paraphrase-MiniLM-L6-v2"` for English documents or `"paraphrase-multilingual-MiniLM-L12-v2"`
-for multi-lingual documents or any other language.  
-
-<a name="embeddings"/></a>
-###  2.3. Embedding Models
-KeyBERT supports many embedding models that can be used to embed the documents and words:
-
-* Sentence-Transformers
-* Flair
-* Spacy
-* Gensim
-* USE
-
-Click [here](https://maartengr.github.io/KeyBERT/guides/embeddings.html) for a full overview of all supported embedding models.
-
-**Sentence-Transformers**  
-You can select any model from `sentence-transformers` [here](https://www.sbert.net/docs/pretrained_models.html)
-and pass it through KeyBERT with `model`:
-
-```python
-from keybert import KeyBERT
-kw_model = KeyBERT(model='paraphrase-MiniLM-L6-v2')
-```
-
-Or select a SentenceTransformer model with your own parameters:
-
-```python
-from keybert import KeyBERT
-from sentence_transformers import SentenceTransformer
-
-sentence_model = SentenceTransformer("paraphrase-MiniLM-L6-v2")
-kw_model = KeyBERT(model=sentence_model)
-```
-
-**Flair**  
-[Flair](https://github.com/flairNLP/flair) allows you to choose almost any embedding model that
-is publicly available. Flair can be used as follows:
-
-```python
-from keybert import KeyBERT
-from flair.embeddings import TransformerDocumentEmbeddings
-
-roberta = TransformerDocumentEmbeddings('roberta-base')
-kw_model = KeyBERT(model=roberta)
-```
-
-You can select any 🤗 transformers model [here](https://huggingface.co/models).
 
 
 ## Citation
