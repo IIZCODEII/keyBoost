@@ -178,7 +178,7 @@ def statistical_consensus(key_extractions,
             discriminative_sanity.append(False)
 
 
-    print(discriminative_sanity)
+    #print(discriminative_sanity)
 
     if np.array(discriminative_sanity).all():
             #print('Consolidation + Rank Extraction')
