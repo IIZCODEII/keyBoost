@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
    name='keyboost',
@@ -6,7 +6,7 @@ setup(
    description='KeyBoost is simple and easy-to-use keyword extraction tool that moves away the hassle of selecting the best models for your specific use-case.',
    author='Zakaria Bekkar',
    author_email='zakaria.bekkar@ens-paris-saclay.fr',
-   packages=['keyboost'],  #same as name
+   packages=find_packages(),  #same as name
    install_requires=['wheel',
                     'torch',
                     'torchvision',
@@ -22,4 +22,4 @@ setup(
                     'en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.0.0/en_core_web_sm-3.0.0.tar.gz',
                     'fr_core_news_sm @ https://github.com/explosion/spacy-models/releases/download/fr_core_news_sm-3.0.0/fr_core_news_sm-3.0.0.tar.gz',
                     ], #external packages as dependencies
-)
+                    )
