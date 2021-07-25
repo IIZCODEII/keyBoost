@@ -1,10 +1,10 @@
 import numpy as np
 import pandas as pd
-from keyBoost.models.yake import yake_extraction
-from keyBoost.models.keybert import keybert_extraction
-from keyBoost.models.textrank import textrank_extraction
-from keyBoost.consensus.statistical import *
-from keyBoost.consensus.ranking import rank_consensus
+from keyboost.models.yake import yake_extraction
+from keyboost.models.keybert import keybert_extraction
+from keyboost.models.textrank import textrank_extraction
+from keyboost.consensus.statistical import *
+from keyboost.consensus.ranking import rank_consensus
 
 class KeyBoost:
 

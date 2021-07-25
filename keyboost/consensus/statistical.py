@@ -5,8 +5,8 @@ import scipy.stats as st
 import statsmodels.api as sm
 from warnings import filterwarnings
 filterwarnings('ignore')
-from keyBoost.consensus.utils import deduplication
-from keyBoost.consensus.ranking import rank_consensus
+from keyboost.consensus.utils import deduplication
+from keyboost.consensus.ranking import rank_consensus
 
 
 # Allows to set an optimal scale for the histogram in terms of bins
