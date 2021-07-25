@@ -96,7 +96,7 @@ You can intuitively fine tune the results by:
 * setting `consensus` to either *statistical* or *rank*
 * selecting only a subset of the 3 main models in `models`
 
-For a more detailed introduction to the capabilities of keyboost, a tutorial is availaible [![Here](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1X-ANEMa1xmNFztRdo-YXQh2lBmPwVueQ/view?usp=sharing)
+For a more detailed introduction to the capabilities of keyboost, a tutorial is availaible here [![Here](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1X-ANEMa1xmNFztRdo-YXQh2lBmPwVueQ/view?usp=sharing)
 
 
 
