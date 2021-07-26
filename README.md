@@ -1,5 +1,5 @@
 [![DOI](https://zenodo.org/badge/389295849.svg)](https://zenodo.org/badge/latestdoi/389295849)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1X-ANEMa1xmNFztRdo-YXQh2lBmPwVueQ/view?usp=sharing)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/19oAPrqmfeO_1F_losdF8hvuN5iq-HtVa?usp=sharing)
 
 <p align = 'center'> <img src="keyboost.png"/> </p>
 
@@ -93,8 +93,7 @@ You can intuitively fine tune the results by:
 * setting `consensus` to either *statistical* or *rank*
 * selecting only a subset of the 3 main models in `models`
 
-For a more detailed introduction to the capabilities of keyboost, a tutorial is availaible here [![Here](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1X-ANEMa1xmNFztRdo-YXQh2lBmPwVueQ/view?usp=sharing)
-
+For a more detailed introduction to the capabilities of keyboost, a tutorial is availaible here [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/19oAPrqmfeO_1F_losdF8hvuN5iq-HtVa?usp=sharing)
 
 
 ## Citation
