@@ -7,9 +7,9 @@
 
 KeyBoost is simple and easy-to-use keyword extraction tool that moves away the hassle of selecting the best models for your specific use-case. No background in the litterature of keyword extraction or expertise is needed to extract the *best* possible keywords given no prior knowledge of what are the most performant models for your task.
 
-KeyBoost has the structure of a *meta-model* that consolidates the keyword extractions from many models in a way that forms a global *consensus* on which are more likely to be relevant keywords.
+KeyBoost has the structure of a *meta-model* that consolidates the keyword extractions from many models in a way that forms a global *consensus* on the most relevant keywords.
 
-A technical deep dive on the ins and outs of this architecture is availaible [here](https://towardsdatascience.com/keyword-extraction-with-bert-724efca412ea).
+A technical deep dive on the ins and outs of this architecture is availaible [here](#note_technique).
 
 <a name="toc"/></a>
 ## Table of Contents  
@@ -28,7 +28,7 @@ A technical deep dive on the ins and outs of this architecture is availaible [he
 Wishing to apply keyword extraction to ecology-related administrative documents, I was confronted to the large breadth of available techniques making any kind of arbitrage between them frustrating for a number of reasons.
 
 * I did not have any labeled data for my use-case to test the models on. I had thus no visibility on the real performance of theses algorithms.
-* A brief review of keyword extraction litterature emphasized on the fact that there is a large amount of models that performs very differently from a use-case (corpus type, writing style, etc) to another
+* A brief review of keyword extraction litterature emphasized on the fact that there is a large amount of models that performs very differently from a use-case to another (in terms ofcorpus type, writing style, etc)
 * Just randomly picking a model was not satisfactory, I wanted a rational and structured approach to deal with this incertainty situation in a manner that could, by the way, benefit the many facing the same challenges.
 
 <p align = 'center'> <img src="keyBoost_overview.PNG"/> </p>
