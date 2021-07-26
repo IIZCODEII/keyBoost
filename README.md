@@ -59,7 +59,7 @@ pip install git+https://github.com/IIZCODEII/keyboost.git#egg=keyboost
 ```
 
 <a name="usage"/></a>
-###  2.2. Usage
+###  2.2. Basic Usage
 
 The basic task of extracting keywords from a document with keyBoost can be done in a few lines of code :
 
