@@ -1,6 +1,3 @@
-[![PyPI - Python](https://img.shields.io/badge/python-3.6%20|%203.7%20|%203.8-blue.svg)](https://pypi.org/project/keybert/)
-[![PyPI - License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/MaartenGr/keybert/blob/master/LICENSE)
-[![PyPI - PyPi](https://img.shields.io/pypi/v/keyBERT)](https://pypi.org/project/keybert/)
 [![DOI](https://zenodo.org/badge/389295849.svg)](https://zenodo.org/badge/latestdoi/389295849)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1X-ANEMa1xmNFztRdo-YXQh2lBmPwVueQ/view?usp=sharing)
 
