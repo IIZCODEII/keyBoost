@@ -1,7 +1,7 @@
 [![PyPI - Python](https://img.shields.io/badge/python-3.6%20|%203.7%20|%203.8-blue.svg)](https://pypi.org/project/keybert/)
 [![PyPI - License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/MaartenGr/keybert/blob/master/LICENSE)
 [![PyPI - PyPi](https://img.shields.io/pypi/v/keyBERT)](https://pypi.org/project/keybert/)
-[![Build](https://img.shields.io/github/workflow/status/MaartenGr/keyBERT/Code%20Checks/master)](https://pypi.org/project/keybert/)
+[![DOI](https://zenodo.org/badge/389295849.svg)](https://zenodo.org/badge/latestdoi/389295849)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1X-ANEMa1xmNFztRdo-YXQh2lBmPwVueQ/view?usp=sharing)
 
 <p align = 'center'> <img src="keyboost.png"/> </p>
@@ -101,37 +101,29 @@ For a more detailed introduction to the capabilities of keyboost, a tutorial is 
 
 
 ## Citation
-To cite KeyBERT in your work, please use the following bibtex reference:
+To cite keyBoost in your work, please use the following bibtex reference:
 
 ```bibtex
-@misc{grootendorst2020keybert,
-  author       = {Maarten Grootendorst},
-  title        = {KeyBERT: Minimal keyword extraction with BERT.},
-  year         = 2020,
+@misc{bekkar2021keyboost,
+  author       = {Zakaria Bekkar},
+  title        = {keyBoost: Consensus Meta-Model for Keyword Extraction.},
+  year         = 2021,
   publisher    = {Zenodo},
-  version      = {v0.3.0},
-  doi          = {10.5281/zenodo.4461265},
-  url          = {https://doi.org/10.5281/zenodo.4461265}
+  version      = {v0.1},
+  doi          = {10.5281/zenodo.5136971},
+  url          = {https://doi.org/10.5281/zenodo.5136971}
 }
 ```
 
 ## References
-Below, you can find several resources that were used for the creation of KeyBERT
-but most importantly, these are amazing resources for creating impressive keyword extraction models:
 
 **Papers**:  
-* Sharma, P., & Li, Y. (2019). [Self-Supervised Contextual Keyword and Keyphrase Retrieval with Self-Labelling.](https://www.preprints.org/manuscript/201908.0073/download/final_file)
+* Large-Scale Evaluation of Keyphrase Extraction Models, Boudin, Daille and Gallina, 2020
+* Automatic keyphrase extraction : a survey of the state of the art, Hasan and Ng, 2014
+* YAKE! Keyword extraction from single documents using multiple local features, Campos et al., 2020
+* TextRank: Bringing Order into Text, Mihalcea and Tarau, 2004
 
 **Github Repos**:  
-* https://github.com/thunlp/BERT-KPE
-* https://github.com/ibatra/BERT-Keyword-Extractor
-* https://github.com/pranav-ust/BERT-keyphrase-extraction
-* https://github.com/swisscom/ai-research-keyphrase-extraction
-
-**MMR**:  
-The selection of keywords/keyphrases was modeled after:
-* https://github.com/swisscom/ai-research-keyphrase-extraction
-
-**NOTE**: If you find a paper or github repo that has an easy-to-use implementation
-of BERT-embeddings for keyword/keyphrase extraction, let me know! I'll make sure to
-add a reference to this repo.
+* https://github.com/MaartenGr/KeyBERT
+* https://github.com/LIAAD/yake
+* https://github.com/RaRe-Technologies/gensim
